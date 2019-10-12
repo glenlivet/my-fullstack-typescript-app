@@ -10,8 +10,27 @@ This project is used as a self technical introduction. It meets almost all the a
 1. Clone source code by `git clone https://github.com/glenlivet/my-fullstack-typescript-app.git`.
 2. Install the dependencies by `npm install`.
 3. Build the distribution by `npm run build:backend && npm run build:frontend`.
-4. Simply run the server by `npm run start`.
+4. Simply run the server by `npm run start`. Alternatively, one can start dev mode by `npm run dev` and do test by `npm run test`.
 5. Enter the default url http://localhost:3000/.
+
+# Project Structure
+- Root
+  - src (the source code location)
+     - web (the runtime code)
+       - constants (hold constants)
+       - exceptions (defines exceptions)
+       - frontend (hold ReactJS code)
+         - components (ReactJS components)
+         - main.tsx (front-end entry point)
+       - models (hold data models)
+       - routes (hold Express routes)
+       - services (hold business services)
+       - utils (utilities)
+       - web.ts (back-end entry point)
+     - tests (the tests)
+  - public (the place to hold static files)
+  - node_modules
+  - dist (distribution)
 
 # Have Done
 * A backend API is created to fetch all breed list in the format requested. The default URL is: http://localhost:3000/api/breeds .
@@ -42,3 +61,4 @@ The technologies used in this project includes:
 * jest & fetch-mock (testing)
 * webpack (packaging)
 * nodemon (dev-kit)
+* scaffold (https://github.com/atomAltera/my-fullstack-typescript-app-scaffold)
