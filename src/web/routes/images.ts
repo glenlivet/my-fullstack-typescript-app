@@ -1,15 +1,18 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 import { BreedService } from "../services";
 import { BreedJSON } from "../models";
 import { ApiIncompatibleException } from "../exceptions";
 
 const router = Router();
 
-//Get all breeds
-router.get("/", (req, res) => {
+const fetchImages = (req: Request, res: Response) => {
+  const breed: BreedJSON = {
+    breed: req.params.qBreed,
+    subbreed: req.params.qSubbreed,
+  }
   const breedService: BreedService = new BreedService();
-  breedService.listAll()
-    .then((data: BreedJSON[]) => {
+  breedService.fetchImages(breed)
+    .then((data: string[]) => {
       res.json(data);
     })
     .catch((err: Error) => {
@@ -20,7 +23,11 @@ router.get("/", (req, res) => {
       }
       res.sendStatus(503);
     });
-});
+};
+//Get all images of a breed.
+router.get("/:qBreed", fetchImages);
+//Get all images of a subbreed.
+router.get("/:qBreed/:qSubbreed", fetchImages);
 
 
 export default router;

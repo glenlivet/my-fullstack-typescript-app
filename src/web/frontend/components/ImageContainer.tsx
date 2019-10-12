@@ -15,7 +15,7 @@ class ImageContainer extends React.Component<ImageContainerProps, {}> {
     }
     return (
             <div className={`image-container image-container-lg image-container-xs ${containerClassName}`}>
-             <img src={this.props.src} className={`dog-image ${this.props.imageClass}`}/>
+             <img key={this.props.src} src={this.props.src} className={`dog-image ${this.props.imageClass}`}/>
              </div>);
 
   }

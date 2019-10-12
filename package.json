@@ -7,7 +7,7 @@
     "test": "mocha ./dist/tests/*.js --exit",
     "build:backend": "tsc",
     "build:frontend": "webpack",
-    "dev": "nodemon ./dist/main.js", 
+    "dev": "nodemon ./dist/main.js",
     "start": "node ./dist/main.js"
   },
   "keywords": [],

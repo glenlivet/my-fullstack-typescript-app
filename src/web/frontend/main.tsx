@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
-import ImageGroup from "./components/ImageGroup";
-
+import SelectGroup from "./components/selectGroup";
 import "./reset.css";
 import "./style.css";
 
@@ -13,10 +12,10 @@ const list = [
     ];
 
 const App = () => {
-
+    const breeds = ["one", "two", "three"];
     return (
         <div className="app">
-          <ImageGroup srcList={list}/>
+          <SelectGroup />
         </div>
     )
 };
