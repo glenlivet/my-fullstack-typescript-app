@@ -1,9 +1,19 @@
-.App {
+.app {
     margin: 30px auto;
     max-width: 320px;
     padding: 2em;
     border: 1px solid silver;
     border-radius: 1em;
-
     text-align: center;
+}
+
+.img-container {
+  margin: auto;
+  max-width: 300px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
