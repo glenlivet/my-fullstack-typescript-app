@@ -1,18 +1,22 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
+import ImageGroup from "./components/ImageGroup";
 
+import "./reset.css";
 import "./style.css";
 
+const list = [
+        "https://images.dog.ceo/breeds/hound-basset/n02088238_9595.jpg",
+        "https://images.dog.ceo/breeds/terrier-irish/n02093991_1339.jpg",
+        "https://images.dog.ceo/breeds/kelpie/n02105412_251.jpg",
+        "https://images.dog.ceo/breeds/frise-bichon/jh-ezio-1.jpg"
+    ];
+
 const App = () => {
-    const [c, increment] = useState(0);
 
     return (
         <div className="app">
-            <h1>{c}</h1>
-            <button onClick={() => increment(c + 1)}>Press me</button>
-            <div className="img-container">
-              <img src="https://images.dog.ceo/breeds/terrier-norfolk/n02094114_1972.jpg"/>
-            </div>
+          <ImageGroup srcList={list}/>
         </div>
     )
 };
