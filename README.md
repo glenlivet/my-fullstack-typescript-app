@@ -9,8 +9,9 @@ This project is used as a self technical introduction. It meets almost all the a
 # How to Run
 1. Clone source code by `git clone https://github.com/glenlivet/my-fullstack-typescript-app.git`.
 2. Install the dependencies by `npm install`.
-3. Simply run the server by `npm run start`.
-4. Enter the default url http://localhost:3000/.
+3. Build the distribution by `npm run build:backend && npm run build:frontend`.
+4. Simply run the server by `npm run start`.
+5. Enter the default url http://localhost:3000/.
 
 # Have Done
 * A backend API is created to fetch all breed list in the format requested. The default URL is: http://localhost:3000/api/breeds .

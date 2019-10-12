@@ -5,8 +5,16 @@
 }
 
 .select-group {
-  display: flex;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.select-container {
+  flex-grow: 1;
+    padding: 0.2em;
+    margin: 0.2em auto;
 }
 
 .image-group {
@@ -17,7 +25,7 @@
 }
 
 select {
-  margin: 1em auto;
+  margin: 0.2em auto;
 }
 
 img {
@@ -50,6 +58,10 @@ img {
     width: 30%;
     height: auto;
   }
+  .select-container-lg {
+    width: 30%;
+    height: auto;
+  }
 
 }
 
@@ -64,5 +76,10 @@ img {
     min-width: 240px;
     min-height: auto;
   }
+  .select-container-xs {
+    min-width: 240px;
+    min-height: auto;
+  }
+
 
 }

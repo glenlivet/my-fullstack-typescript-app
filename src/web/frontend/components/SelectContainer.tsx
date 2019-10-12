@@ -17,7 +17,7 @@ class SelectContainer extends React.Component<SelectContainerProps, {}> {
   render() {
     if (this.props.options.length === 0) {
       return (
-        <div className={`select-container ${this.props.containerClass ? this.props.containerClass : ''} container-invisible`}>
+        <div className={`select-container select-container-xs select-container-lg ${this.props.containerClass ? this.props.containerClass : ''} container-invisible`}>
         </div>
       );
     }
@@ -38,7 +38,7 @@ class SelectContainer extends React.Component<SelectContainerProps, {}> {
       <option key="_placeholder">{`Please select ${this.props.selectType}`}</option>
     );
     return (
-            <div className={`select-container ${this.props.containerClass ? this.props.containerClass : ''}`}>
+            <div className={`select-container select-container-xs select-container-lg ${this.props.containerClass ? this.props.containerClass : ''}`}>
               <select
                 className={`breed-select ${this.props.selectClass ? this.props.selectClass : ''}`}
                 onChange={this.onSelectChange.bind(this)}>
