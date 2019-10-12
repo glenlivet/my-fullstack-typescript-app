@@ -28,6 +28,7 @@
     "jest": "^24.9.0",
     "jest-fetch-mock": "^2.1.2",
     "mocha": "^6.2.1",
+    "nodemon": "^1.19.3",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
